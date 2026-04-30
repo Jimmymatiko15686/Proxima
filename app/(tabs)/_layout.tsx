@@ -9,9 +9,14 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: "#0a0a0a",
           borderTopColor: "#1a1a1a",
+          height: 60,
+          paddingBottom: 8,
         },
         tabBarActiveTintColor: "#7C3AED",
         tabBarInactiveTintColor: "#666",
+        tabBarLabelStyle: {
+          fontSize: 11,
+        },
       }}
     >
       <Tabs.Screen
@@ -33,6 +38,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="messages"
+        options={{
+          title: "Chats",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="chatbubbles-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="events"
         options={{
           title: "Events",
@@ -47,6 +61,21 @@ export default function TabLayout() {
           title: "Profile",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      {/* Hidden from tab bar — accessible via Feed header icons */}
+      <Tabs.Screen
+        name="links"
+        options={{ href: null, title: "Links" }}
+      />
+      <Tabs.Screen
+        name="notifications"
+        options={{ 
+          href: null,
+          title: "Alerts",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="notifications-outline" size={size} color={color} />
           ),
         }}
       />

@@ -1,0 +1,50 @@
+export const colors = {
+  primary: '#7C3AED',
+  primaryLight: '#9D5FF3',
+  primaryDark: '#5B21B6',
+  success: '#4CAF50',
+  warning: '#FF9500',
+  info: '#2196F3',
+
+  dark: {
+    background: '#000000',
+    surface: '#0C0C0C',
+    card: '#141414',
+    border: '#2A2A2A',
+    text: '#FFFFFF',
+    textSecondary: '#A0A0C0',
+    textMuted: '#606080',
+    tabBar: '#000000',
+    primaryBg: '#1C0D2E',
+    primaryBorder: '#3A1E6D',
+    successBg: '#112A13',
+    warningBg: '#3D2500',
+    infoBg: '#072442',
+  },
+
+  light: {
+    background: '#F0F0FF',
+    surface: '#FFFFFF',
+    card: '#FFFFFF',
+    border: '#E0E0F0',
+    text: '#0A0A1A',
+    textSecondary: '#4A4A6A',
+    textMuted: '#8A8AAA',
+    tabBar: '#FFFFFF',
+    primaryBg: '#EFE5FD',
+    primaryBorder: '#D8C2F9',
+    successBg: '#E8F5E9',
+    warningBg: '#FFF3E0',
+    infoBg: '#E3F2FD',
+  },
+  fonts: {
+    regular: 'Outfit-Regular',
+    medium: 'Outfit-Medium',
+    semiBold: 'Outfit-SemiBold',
+    bold: 'Outfit-Bold',
+    extraBold: 'Outfit-ExtraBold',
+    black: 'Outfit-Black',
+  },
+};
+
+export type Theme = typeof colors.dark;
